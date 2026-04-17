@@ -8,13 +8,13 @@ namespace WebApp.Controllers
     {
         public IActionResult Index()
         {
-            //Uso de ViewData
-            ViewData["Id"] = "1";
-            ViewData["Marca"] = "Epson";
-            ViewData["Modelo"] = "XLight";
-            ViewData["NúmeroDeSerie"] = "123456";
-            ViewData["Situación"] = "Bueno";
-            ViewData["FechaDeAlta"] = DateTime.Now.ToString();
+            //Uso de ViewBag
+            ViewBag.Id = 2;
+            ViewBag.Marca = "Epson";
+            ViewBag.Modelo = "XLight";
+            ViewBag.NúmeroDeSerie = "123456";
+            ViewBag.Situación = 1;
+            ViewBag.FechaDeAlta = DateTime.Now.ToString("d");
             return View();
         }
 
