@@ -33,8 +33,16 @@ namespace WebApp.Controllers
         [HttpPost]
         public IActionResult Create(Proyector proyector)
         {
-            _service.AddProyector(proyector);
-            return RedirectToAction("Index");
+            if (!ModelState.IsValid)
+            {
+                return View(proyector);
+            }
+            else
+            {
+                _service.AddProyector(proyector);
+                return RedirectToAction(nameof(Index));
+
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
