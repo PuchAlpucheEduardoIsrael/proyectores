@@ -18,7 +18,45 @@ namespace WebApp.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Departamento>()
-                .ToTable("Departamentos");
+                .ToTable("Departamentos")
+                .HasData(
+                    new Departamento()
+                    {
+                        Id = 1,
+                        Titulo = "Departamento de Sistemas y Computación"
+                    },
+                    new Departamento()
+                    {
+                        Id = 2,
+                        Titulo = "Departamento de Ingeniería Industrial"
+                    },
+                    new Departamento()
+                    {
+                        Id = 3,     
+                        Titulo = "Departamento de Ciencias de la Tierra"
+                    },
+                    new Departamento()
+                    {
+                        Id = 4, 
+                        Titulo = "Departamento de Ciencias Economico-Administrativas"
+                    },
+                    new Departamento()
+                    {
+                        Id = 5,
+                        Titulo = "Departamento de Metal-Mecanica"
+                    },
+                    new Departamento()
+                    {
+                        Id = 6,
+                        Titulo = "Departamento de Quimica-Bioquimica"
+                    }
+                    ,
+                    new Departamento()
+                    { 
+                        Id = 7, 
+                        Titulo = "Departamento de Ciencias Basicas"
+                    }
+                    );
             modelBuilder.Entity<Proyector>()
                 .ToTable("Proyectores");
         }
