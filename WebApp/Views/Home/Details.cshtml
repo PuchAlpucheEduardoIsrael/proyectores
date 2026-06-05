@@ -1,0 +1,43 @@
+﻿@model Proyector;
+@{
+    ViewData["Title"] = "Detalles del Proyector";
+}
+
+<div class="container">
+    <h2 class="display-5">Información del Proyector # @Model.Id</h2> 
+</div>
+    <div>
+        <div class="form-group mb-3">
+            <label class="form-label">Marca:</label>
+            <label class="form-label">@Model.Marca</label>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Modelo:</label>
+            <label class="form-label">@Model.Modelo</label>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label"># De Serie:</label>
+            <label class="form-label">@Model.NumeroDeSerie</label>
+        </div>
+
+        <div class ="form-group mb-3">
+            <label class="form-label">Fecha de Alta:</label>
+            <label class="form-label">@Model.FechaDeAlta</label>
+        </div>
+
+        <div class="form-group-mb3">
+            <label class="form-label">Fecha de Baja:</label>
+            <label class="form-label">@Model.FechaDeBaja</label>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Situación:</label>
+            <label class="form-label">@Model.Situacion</label>
+        </div>
+
+        <div>
+            <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancelar </a>
+        </div>
+    </div>
