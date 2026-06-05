@@ -10,5 +10,8 @@ namespace WebApp.Models
 
         [Required(ErrorMessage ="Debe proporcionar el titulo del departamento")]
         public string Titulo { get; set; } = string.Empty;
+
+        //Propiedad de navegación de la realación
+        public IEnumerable<Proyector> Proyectores { get; set; }
     }
 }
